@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6">
+    <h3>Persons Demo</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <button class="btn btn-primary" (click)="onLoad()">Load Persons</button>
+      </div>
+      <div class="col-md-8" *ngIf="wait">
+        <div class="spinner-border text-success" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-4" *ngFor="let person of Persons">
+    <app-person-item [person]="person"></app-person-item>
+  </div>
+</div>
